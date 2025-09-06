@@ -1,0 +1,34 @@
+AI-powered smart mattress topper that enhances sleep quality using IoT sensors and AI/ML-driven personalization. Monitors sleep patterns, adjusts comfort settings, and 
+provides insights. Designed as a hackathon-ready prototype emphasizing novelty, innovation, and implementation readiness.
+
+⚙️ Features
+
+Real-time sleep monitoring (heart rate, motion, pressure)
+
+AI/ML models for sleep stage classification
+
+Personalized comfort adjustments (firmness, temperature, vibration)
+
+Mobile dashboard for analytics
+
+Cloud-based data storage + insights
+
+🔬 Tech/Concepts
+
+AI/ML: Sleep pattern classification, anomaly detection
+
+IoT Sensors: Pressure sensors, motion sensors, optional heart rate sensor
+
+Data Processing: Edge (Arduino/Raspberry Pi) + cloud analysis
+
+Health Tech: Personalized recommendations
+
+Frontend: Mobile/web dashboard for visualization
+
+🎯 Outcome
+
+Final round hackathon showcase
+
+Strong emphasis on novelty, uniqueness, and readiness
+
+Prototype + concept demonstrated feasibility in health tech
