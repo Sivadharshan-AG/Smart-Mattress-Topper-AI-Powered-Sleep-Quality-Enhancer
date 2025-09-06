@@ -1,0 +1,73 @@
+1. Pressure Sensor Data Collection (Arduino/ESP32)
+#include <Wire.h>
+
+const int rows = 4;  // Example: 4x4 pressure sensor grid
+const int cols = 4;
+int sensorPins[rows][cols] = {
+  {34, 35, 32, 33},
+  {25, 26, 27, 14},
+  {12, 13, 23, 22},
+  {21, 19, 18, 5}
+};
+
+void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      int val = analogRead(sensorPins[i][j]);
+      Serial.print(val);
+      Serial.print("\t");
+    }
+    Serial.println();
+  }
+  delay(500);
+}
+
+2. Python Code – Converting Pressure Data into Heatmap
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Example: simulated 4x4 pressure grid
+pressure_data = np.array([
+    [200, 400, 350, 100],
+    [500, 800, 700, 200],
+    [300, 600, 750, 250],
+    [100, 200, 150, 50]
+])
+
+plt.imshow(pressure_data, cmap="hot", interpolation="nearest")
+plt.colorbar(label="Pressure Level")
+plt.title("Body Pressure Distribution Heatmap")
+plt.show()
+
+3. Simple ML Model for Discomfort Prediction
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+
+# Features: [avg_pressure, max_pressure, movement_level, temp]
+X = np.array([
+    [300, 800, 2, 27],  # uncomfortable
+    [150, 400, 0, 24],  # comfortable
+    [400, 900, 3, 29],  # uncomfortable
+    [200, 500, 1, 25],  # comfortable
+])
+
+y = [1, 0, 1, 0]  # 1 = discomfort, 0 = comfortable
+
+clf = RandomForestClassifier()
+clf.fit(X, y)
+
+# Example new input
+new_data = np.array([[350, 850, 2, 28]])
+prediction = clf.predict(new_data)
+print("Discomfort" if prediction[0] == 1 else "Comfortable")
+
+🔹 Expected Outcome
+
+✅ Real-time monitoring of posture & sleep quality.
+✅ Personalized acupressure-based interventions.
+✅ Improved sleep health & reduced fatigue.
+✅ Dataset contribution for sleep research.
