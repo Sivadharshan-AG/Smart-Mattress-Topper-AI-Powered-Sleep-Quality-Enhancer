@@ -1,0 +1,88 @@
+Smart Mattress Topper – Detailed Project Idea
+🔹 Problem Statement
+
+Poor sleep quality is linked to stress, back pain, and health risks like hypertension and diabetes. Traditional mattresses lack personalization and cannot adapt to an individual’s body posture, sleep cycle, or pressure points.
+
+🔹 Proposed Solution
+
+An AI-powered mattress topper embedded with IoT sensors to:
+
+Monitor: Detect body pressure distribution, posture, temperature, and movements.
+
+Analyze: Use AI/ML models to detect discomfort, improper spinal alignment, or restlessness.
+
+Respond: Automatically adjust firmness, provide micro-vibrations at acupressure points, or regulate temperature.
+
+Personalize: Generate a daily Sleep Wellness Report with suggestions.
+
+🔹 Acupressure Integration
+
+The topper includes pressure nodes aligned with key acupressure points (e.g., spine, neck, lower back, legs).
+
+By applying gentle pressure/vibration/heat at these points, it enhances relaxation and improves circulation.
+
+Examples of mapped points:
+
+GV20 (top of head) → stress relief & calmness
+
+BL23 (lower back) → reduces back pain & fatigue
+
+HT7 (wrist area, via arm sensors/side support) → better sleep quality
+
+KD1 (sole of foot, via foot zone pressure mapping) → grounding & stress reduction
+
+This mapping will be personalized using sensor feedback and ML models trained on pressure-relaxation correlations.
+
+🔹 Dataset & AI Model
+
+Since sleep-related datasets are sensitive, we rely on public + synthetic datasets:
+
+Public Sources:
+
+MIT Sleep Lab Dataset – polysomnography + activity monitoring.
+
+PhysioNet Sleep-EDF – EEG + sleep stage data.
+
+Pressure Mapping Datasets – body posture datasets for pressure distribution (e.g., Sleep Posture Classification datasets on Kaggle).
+
+Synthetic Data:
+
+Create simulated pressure maps (2D arrays of pressure values from load sensors).
+
+Label: "Comfortable", "Discomfort", "Needs Adjustment".
+
+ML Approach:
+
+CNN (Convolutional Neural Network) for posture recognition (from pressure maps).
+
+Random Forest/Decision Tree for discomfort prediction (using temperature + movement + heart rate + pressure imbalance).
+
+🔹 System Architecture
+
+Hardware Layer (IoT sensors)
+
+Pressure sensors (FSR grid under the topper).
+
+Temperature/humidity sensors.
+
+IMU sensors for movement.
+
+Vibration motors + heating pads (for acupressure response).
+
+Microcontroller (ESP32 / Arduino Nano 33 IoT).
+
+AI/ML Processing
+
+Edge-level lightweight ML (basic posture detection).
+
+Cloud-based analysis for long-term trends (using Flask/FastAPI + TensorFlow/PyTorch).
+
+Mobile/Web App
+
+Live sleep tracking dashboard.
+
+Sleep reports (sleep stages, restlessness, posture issues).
+
+Multilingual support (English + local languages).
+
+Voice assistant integration for accessibility.
