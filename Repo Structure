@@ -1,0 +1,16 @@
+Smart-Mattress-Topper/
+│── README.md
+│── /docs
+│   ├── Smart_Mattress_Report.pdf
+│   ├── Presentation_Slides.pptx
+│── /hardware
+│   ├── arduino_code.ino
+│   └── circuit_diagram.png
+│── /ml_model
+│   ├── train_model.py
+│   ├── predict_sleep.py
+│   └── sample_dataset.csv
+│── /dashboard
+│   ├── app.py  (Flask/Django)
+│   ├── templates/
+│   └── static/
